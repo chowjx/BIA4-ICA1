@@ -24,6 +24,18 @@ def convert_to_RGB_image(image):
     else:
         image
     return image
+
+def cut_white_edge(image,threshold1=254,threshold2=255):
+    gray_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    _, thresh = cv2.threshold(gray_img, threshold1, threshold2, cv2.THRESH_BINARY_INV)
+    contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    max_area=0
+    for cnt in contours:
+        area = cv2.contourArea(cnt)
+        if area > max_area:
+            max_area = area
+            x, y, w, h = cv2.boundingRect(cnt)
+    return image[y:y+h, x:x+w]
         
 def resize_and_rescale(image, size=(320, 320)):
     image_resized = cv2.resize(image, size) # Resize image
@@ -49,6 +61,7 @@ def preprocess_image(image_path, size=(320, 320)):
     image = imread(image_path)
     #Perform above steps
     image = convert_to_RGB_image(image)
+    image = cut_white_edge(image)
     image = enhance_contrast(image)
     image = resize_and_rescale(image, size=size)
     image = reduce_noise(image)
@@ -64,8 +77,8 @@ def process_folder(input_folder, output_folder):
             processed_image = preprocess_image(file_path,size=(320, 320))
             imsave(os.path.join(output_folder, filename), img_as_ubyte(processed_image))
 
-process_folder('../input/tb-chest-radiography/TB_Chest_Radiography_Database/Normal', 'preprocessed_normal')
-process_folder('../input/tb-chest-radiography/TB_Chest_Radiography_Database/Tuberculosis', 'preprocessed_tb')
+process_folder('../input/tb-chest-radiography/TB_Chest_Radiography_Database/Normal', 'processed_normal')
+process_folder('../input/tb-chest-radiography/TB_Chest_Radiography_Database/Tuberculosis', 'processed_tb')
 print("Data preprocessing completed")
 
 
