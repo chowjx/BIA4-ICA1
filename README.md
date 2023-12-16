@@ -27,12 +27,12 @@ Before running the script, ensure you have the following installed:
 1. **Prepare Your Data**: Organize your images. You can preprocess single images or multiple images in a folder.
 
 2. **Set Input and Output Paths**:
-   -input_path[-i]: Path to the image or folder containing images. Default: None
-   `-output_path[-o]`: Path where preprocessed images will be saved. Default: "./preprocessed"
-   `-size[-s]`: Size of output images. Format: weight,height   Default: 320,320
+   - `-input_path [-i]`:  Path to the image or folder containing images.     Default: None.
+   - `-output_path [-o]`: Path where preprocessed images will be saved.      Default: "./preprocessed".
+   - `-size [-s]`:        Size of output images.                             Format: width,height. Default: 320,320.
 
 4. **Run the Script**:
-   - Use `python3 preprocess.py -i path/to/your/image/or/folder -o path/to/save/processed/images -s width,height` to start preprocessing.
+   - Use `python preprocess.py -i path/to/your/image/or/folder -o path/to/save/processed/images -s width,height` to start preprocessing.
    - The script will automatically handle different file formats (`.png`, `.jpg`, `.jpeg`).
 
 5. **Check Output**: Processed images will be saved in the specified output directory.
