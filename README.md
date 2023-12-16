@@ -4,8 +4,11 @@ This guide provides instructions for using the preprocessing script, which is de
 ## Requirements
 
 Before running the script, ensure you have the following installed:
-- Python 3.10
-- Libraries: `pandas`, `numpy`, `opencv-python` (`cv2`), `scikit-image`
+- Python 3.10.12
+- `numpy` version 1.25.2
+- `pandas` version 2.1.4
+- `opencv-python` (`cv2`) version 4.8.1.78
+- `scikit-image` version 0.22.0
 
 ## Usage
 
