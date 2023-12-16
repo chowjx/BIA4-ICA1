@@ -8,6 +8,13 @@ from skimage import img_as_ubyte
 from skimage.filters import median, gaussian
 import argparse
 
+def parse_size(size):
+    try:
+        width, height = map(int, size.split(','))
+        return width, height
+    except ValueError:
+        raise argparse.ArgumentTypeError("Size must be width,height")
+
 def parse_parameters():
     """
     pass the parameters from terminal
@@ -17,7 +24,7 @@ def parse_parameters():
     parser = argparse.ArgumentParser(description='Preprocess')
     parser.add_argument("-input_path","-i", type=str, default=None, help="The input could be a single image file or a folder containing several images.")
     parser.add_argument("-output_path","-o", type=str, default="./preprocessed_data", help="The output files will be saved in the specified path.")
-    parser.add_argument("-size","-s",type=tuple, default=(320,320),
+    parser.add_argument("-size","-s",type=parse_size, default="320,320",
                         help="Set the size of the output images"
                              "Default: 320*320")
     return parser.parse_args()
