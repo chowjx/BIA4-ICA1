@@ -4,6 +4,7 @@ import os
 from skimage.io import imread, imsave
 import cv2
 from skimage.exposure import equalize_hist
+from skimage.color import rgb2hsv, hsv2rgb
 from skimage import img_as_ubyte
 from skimage.filters import median, gaussian
 import argparse
@@ -23,7 +24,7 @@ def parse_parameters():
     """
     parser = argparse.ArgumentParser(description='Preprocess')
     parser.add_argument("-input_path","-i", type=str, default=None, help="The input could be a single image file or a folder containing several images.")
-    parser.add_argument("-output_path","-o", type=str, default="./preprocessed_data", help="The output files will be saved in the specified path.")
+    parser.add_argument("-output_path","-o", type=str, default="./preprocessed", help="The output files will be saved in the specified path.")
     parser.add_argument("-size","-s",type=parse_size, default="320,320",
                         help="Set the size of the output images"
                              "Default: 320*320")
@@ -61,12 +62,9 @@ def resize_and_rescale(image, size=(320, 320)):
 
 def enhance_contrast(image):
     # Enhance contrast using histogram equalization
-    # Perform this step in both b, g, r channels
-    b, g, r = cv2.split(image)
-    be = cv2.equalizeHist(b)
-    ge = cv2.equalizeHist(g)
-    re = cv2.equalizeHist(r)
-    equalized_image = cv2.merge((be, ge, re))
+    ycrcb_img = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
+    ycrcb_img[:, :, 0] = cv2.equalizeHist(ycrcb_img[:, :, 0])
+    equalized_image = cv2.cvtColor(ycrcb_img, cv2.COLOR_YCrCb2BGR)
     return equalized_image
 
 def reduce_noise(image):
