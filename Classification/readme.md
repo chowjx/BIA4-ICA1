@@ -41,7 +41,7 @@ This guide provides instructions for running a classification model using both i
 - **Note**: Remember to modify file paths as needed for your specific testing environment.
 
 ### 8. Preparation for GUI
-- **Setup for User Interface**: Arrange necessary components for the graphical user interface.
+- **Setup for User Interface**: Arrange necessary components for the user interface.
 
   `input_trained_model` input the model from a directory based on model type.
 
