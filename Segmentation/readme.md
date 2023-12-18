@@ -1,9 +1,38 @@
-https://www.kaggle.com/datasets/nikhilpandey360/chest-xray-masks-and-labels
+# Chest X-Ray Image Segmentation - Kaggle Dataset Utilization
 
-Though this kaggle link, you do these things:
-# 1. Load packages and download exogenous datasets (containing kaggle.json)
-# 2. define important functions for training and testing
-# 3. Load the data for training
-# 4. Training
-# 5. Download the saved models from training
-# 6. Reload the model and test the external dataset (Remember to change the paths!)
+## Overview
+This guide outlines the steps to use the Kaggle dataset "Chest X-Ray Masks and Labels" for training an image segmentation model.
+
+## Prerequisites
+- **Kaggle Account**
+- **Kaggle API Key** (`kaggle.json`)
+
+## Steps
+
+### Environment Setup and Dataset Download
+- **Install Necessary Packages**: Ensure all required libraries are installed.
+- **Kaggle API Access**: Upload your `kaggle.json` file to access Kaggle datasets.
+- **Dataset Download**: Obtain the Chest X-Ray dataset from Kaggle.
+- **Unzip Dataset**: Extract the dataset for further use.
+
+### Function Definitions
+- **Define key functions** essential for model training and evaluation.
+
+### Data Loading
+- **Load and preprocess the data** to make it ready for training.
+
+### Model Training
+- **Conduct training** using the processed dataset.
+- **Save the model** post-training.
+
+### Model Download
+- **Retrieve the trained model** from its storage location.
+
+### Testing with External Dataset
+- **Reload the trained model**.
+- **Perform tests** on an external dataset.
+- **Note**: Adapt file paths to suit your specific environment.
+
+## Additional Notes
+- The initial setup is tailored for **Google Colab**. Modify as needed for other environments.
+- Regularly **verify paths and environment configurations** for compatibility with your setup.
