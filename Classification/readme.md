@@ -1,7 +1,7 @@
 # Classification Model Training and Testing on Kaggle
 
 ## Overview
-This guide provides instructions for running a classification model using both internal and external datasets. All codes and datasets are publicly available on Kaggle, and you can execute the training and testing process using GPU through [this Kaggle link](https://www.kaggle.com/code/selix075/classification-training-testing-final/edit).
+This guide provides instructions for running a classification model using both internal and external datasets. All codes and datasets are publicly available on Kaggle, and you can execute the training and testing process using GPU through [this Kaggle link](https://www.kaggle.com/code/selix075/classification-training-testing-final/edit). Besides, all the datasets are available in kaggle.
 
 ## Steps
 
