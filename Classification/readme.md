@@ -34,4 +34,5 @@ This guide provides instructions for running a classification model using both i
 
 ## Additional Notes
 - Ensure you have access to Kaggle and can utilize GPU for the training and testing process.
-- Regularly check and update file paths and environment settings to match your requirements.
+- Regularly check and update file paths and environment settings to match your requirements,
+  especially when you use your own devices, instead of Kaggle.
