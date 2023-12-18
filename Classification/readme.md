@@ -11,7 +11,12 @@ This guide provides instructions for running a classification model using both i
 
 ### 2. Define Important Functions
 - **Function Definitions**: Create key functions for both training and testing phases.
-
+  `input_images_preprocess`
+  `read_merge_data`
+  `create_model`
+  `predict_model`
+  `train_model`
+  `cross_validation`
 ### 3. Data Loading for Training
 - **Load Training Data**: Prepare the dataset to be used for training the model.
 
@@ -31,7 +36,8 @@ This guide provides instructions for running a classification model using both i
 
 ### 8. Preparation for GUI
 - **Setup for User Interface**: Arrange necessary components for the graphical user interface.
-
+  `input_trained_model`
+  `input_and_judge`
 ## Additional Notes
 - Ensure you have access to Kaggle and can utilize GPU for the training and testing process.
 - Regularly check and update file paths and environment settings to match your requirements,
