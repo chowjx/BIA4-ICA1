@@ -1,6 +1,6 @@
 Since all the codes and datasets (Ineternal and External) for classification are public and available at kaggle,
 you can run this train and test model in kaggle through this link by GPU! 
-https://www.kaggle.com/code/selix075/classification-training-testing/edit
+(https://www.kaggle.com/code/selix075/classification-training-testing-final/edit)
 
 Though this kaggle link, you do these things:
 1. Load packages and set hyperparameters
