@@ -12,22 +12,22 @@ This guide provides instructions for running a classification model using both i
 ### 2. Define Important Functions
 - **Function Definitions**: Create key functions for both training and testing phases.
 
-  `input_images_preprocess`
+  `input_images_preprocess` input the images in batch
 
-  `read_merge_data`
+  `read_merge_data` merge images from different directory
 
-  `create_model`
+  `create_model` initialize the model
 
-  `predict_model`
+  `predict_model` use the model perform prediction in many images
 
-  `train_model`
+  `train_model` train the model 
 
-  `cross_validation`
+  `cross_validation` perform K-fold cross-validation to train the models and save all K-fold models.
 ### 3. Data Loading for Training
 - **Load Training Data**: Prepare the dataset to be used for training the model.
 
 ### 4. Model Training
-- **Conduct 5-Fold Cross Validation Training**: This step includes training with 5-fold cross-validation. To save time, you can stop the process after obtaining the 0-fold model.
+- **Conduct K-Fold Cross Validation Training**: This step includes training with K-fold cross-validation. To save time, you can stop the process after obtaining the 0-fold model.
 
 ### 5. Download Trained Models
 - **Retrieve Saved Models**: Download the models saved after the training process.
@@ -43,9 +43,9 @@ This guide provides instructions for running a classification model using both i
 ### 8. Preparation for GUI
 - **Setup for User Interface**: Arrange necessary components for the graphical user interface.
 
-  `input_trained_model`
+  `input_trained_model` input the model from a directory based on model type.
 
-  `input_and_judge`
+  `input_and_judge` test whether one image is normal or not and output the result
 ## Additional Notes
 - Ensure you have access to Kaggle and can utilize GPU for the training and testing process.
 - Regularly check and update file paths and environment settings to match your requirements,
