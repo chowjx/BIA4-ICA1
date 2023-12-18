@@ -1,14 +1,34 @@
-This software is based on python3.7 or later, aiming to help clinical researchers to accurately segment the thoracic region and classify tuberculosis from patients’ chest x-ray images. 
+# Tuberculosis Detector - Chest X-Ray Analysis Tool
 
-Image classification and segmentation may take up considerable running memory. Therefore, please use it properly based on your operating device. Kaggle and Google Colab are recommanded.
+## Overview
+This software, compatible with Python 3.7 or later, is designed to assist clinical researchers in accurately segmenting the thoracic region and classifying tuberculosis from patients' chest X-ray images.
 
-Before using this software, ensure that you have installed python packages PyQt5 5.15.10, Tensorflow 2.15.0, opencv-python 4.8.1.78, numpy 1.26.2 in your python environment. This software zip file contains three python script files, three .h5 model files, as well as three test cases.
+## System Requirements
+- **High Memory Requirement**: Image classification and segmentation may require considerable running memory. Use on an adequately powerful device, with **Kaggle** and **Google Colab** recommended for optimal performance.
 
-The input image should be a chest x-ray image in .png, .jpg, .jpeg format. We support the image segmentation and classification of a single x-ray image.
+## Installation
+Before using this software, ensure the following Python packages are installed in your environment:
+- **PyQt5** version 5.15.10
+- **TensorFlow** version 2.15.0
+- **opencv-python** version 4.8.1.78
+- **NumPy** version 1.26.2
 
-What you could run is the file, GUImain_final.py.
+## Contents of the Software Package
+The software zip file contains:
+- Three Python script files.
+- Three `.h5` model files for the AI models.
+- Three test cases for demonstration and testing purposes.
 
-GUImain.py will produce the graphical user interface of the software Tuberculosis Detector. 
+## Usage
+- **Input Image Format**: The software accepts chest X-ray images in `.png`, `.jpg`, or `.jpeg` formats.
+- **Single Image Processing**: Capable of segmenting and classifying a single X-ray image at a time.
+- **Main Script**: Run `GUImain_final.py` to start the Tuberculosis Detector software.
+- **Graphical User Interface**: `GUImain.py` generates the software's user interface.
 
-You can follow the instructions in the documentation or watch the video Tuberculosis_Detector_user_guide.mp4.
-(https://github.com/chowjx/BIA4-ICA1/blob/main/Tuberculosis_Detector_user_guide.mp4) to run the software on your server.
+## Additional Resources
+- **Documentation**: Follow the instructions provided in the software documentation for guidance.
+- **User Guide Video**: Watch the video tutorial ["Tuberculosis_Detector_user_guide.mp4"](https://github.com/chowjx/BIA4-ICA1/blob/main/Tuberculosis_Detector_user_guide.mp4) for detailed instructions on running the software on your server.
+
+## Note
+- Regularly update your Python environment and packages to ensure compatibility and optimal performance of the software.
+
